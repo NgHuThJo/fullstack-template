@@ -8,7 +8,8 @@
     "jsx": "react-jsx",
     "paths": {
       "#frontend/*": ["./src/*"],
-      "#backend/*": ["../backend/src/*"]
+      "#backend/*": ["../backend/src/*"],
+      "#shared/*": ["../shared/src/*"]
     },
     "outDir": "dist"
   },
@@ -16,6 +17,9 @@
   "references": [
     {
       "path": "../backend"
+    },
+    {
+      "path": "../shared"
     }
   ]
 }

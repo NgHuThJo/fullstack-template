@@ -10,7 +10,7 @@ import globals from "globals";
 export default [
   js.configs.recommended, // Built-in recommended ESLint rules
   {
-    files: ["**/*.{ts,tsx}"], // Apply to TypeScript files
+    files: ["**/*.{ts,tsx}"],
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
@@ -23,16 +23,15 @@ export default [
       "@typescript-eslint": typescriptPlugin,
     },
     rules: {
-      // TypeScript-specific rules
       "no-unused-vars": "off", // Disable base rule
       "@typescript-eslint/no-unused-vars": [
         "warn",
         { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
-      ], // Enable TS-specific rule
+      ],
     },
   },
   {
-    files: ["**/*.{js,jsx,ts,tsx}"], // Apply to all JS/TS files
+    files: ["**/*.{js,jsx,ts,tsx}"],
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
@@ -47,11 +46,10 @@ export default [
       prettier: prettierPlugin,
     },
     rules: {
-      // React-specific rules
       "react/jsx-filename-extension": [1, { extensions: [".jsx", ".tsx"] }], // Allow JSX in .jsx and .tsx files
-      "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
-      "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
-      "prettier/prettier": ["error"], // Enforce Prettier formatting
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "prettier/prettier": ["error"],
       ...prettierConfig.rules, // Disable rules that conflict with Prettier
     },
   },

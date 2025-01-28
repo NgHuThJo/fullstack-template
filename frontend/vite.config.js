@@ -7,9 +7,10 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "#frontend": path.resolve(__dirname, "src"),
+      "#frontend": path.resolve(__dirname, "./src"),
       "#backend": path.resolve(__dirname, "../backend/src"),
-      "#publicAssets": path.resolve(__dirname, "public"),
+      "#shared": path.resolve(__dirname, "../shared/src"),
+      "#publicAssets": path.resolve(__dirname, "./public"),
     },
   },
   test: {
