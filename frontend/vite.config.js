@@ -12,4 +12,11 @@ export default defineConfig({
       "#publicAssets": path.resolve(__dirname, "public"),
     },
   },
+  test: {
+    pool: "threads",
+    isolate: false,
+    environment: "happy-dom",
+    globals: true,
+    setupFiles: ["./src/test/setup.js"],
+  },
 });

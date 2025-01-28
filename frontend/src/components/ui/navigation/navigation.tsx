@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { useAuthContext } from "#frontend/providers/auth-context";
 import { LogoutButton } from "#frontend/features/auth/components/logout/button";
 import { NavigationLink } from "./link/link";

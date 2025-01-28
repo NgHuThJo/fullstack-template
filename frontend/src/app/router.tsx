@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router";
 import { ErrorRoute } from "#frontend/app/routes/error";
 import { NotFoundRoute } from "#frontend/app/routes/not-found";
 
