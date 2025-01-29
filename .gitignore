@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 *.env
-lib/
+# lib/
 *.tsbuildinfo
 
 # Editor directories and files
