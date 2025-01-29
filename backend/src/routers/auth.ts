@@ -1,8 +1,8 @@
 import { z } from "zod";
 import { publicProcedure, router } from "./trpc.js";
 import { authService } from "#backend/services/auth.js";
-import { logError } from "#backend/utils/error-logger.js";
-import { emailSchema, passwordSchema } from "#backend/types/zod.js";
+import { AppError } from "#backend/utils/app-error.js";
+import { emailSchema, passwordSchema } from "shared/src/types/zod.js";
 
 export const authRouter = router({
   loginUser: publicProcedure
@@ -20,7 +20,7 @@ export const authRouter = router({
 
         return user;
       } catch (error) {
-        logError(error);
+        AppError.logError(error);
       }
     }),
 });

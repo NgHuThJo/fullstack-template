@@ -14,7 +14,11 @@ export default [
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
-        project: ["./frontend/tsconfig.json", "./backend/tsconfig.json"],
+        project: [
+          "./frontend/tsconfig.json",
+          "./backend/tsconfig.json",
+          "./shared/tsconfig.json",
+        ],
       },
       ecmaVersion: "latest",
       sourceType: "module",
